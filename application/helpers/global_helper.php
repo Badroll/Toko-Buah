@@ -100,13 +100,12 @@ if ( ! function_exists('get_user_image'))
 
         $picture = $user->profile_picture;
         $file = './assets/uploads/users/'. $picture;
-
         if ( ! file_exists($file))
             $picture_name = $picture;
         else
             $picture_name = 'admin.png';
 
-        return base_url('assets/uploads/users/'. $picture_name);
+        return base_url('assets/uploads/users/'. $picture);
     }
 }
 

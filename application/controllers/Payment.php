@@ -129,7 +129,7 @@ class Payment extends CI_Controller {
         } 
     }
 
-    public function hooks(){
+    public function hooks(){ // AKA notification / webhook
         try {
             $notif = new Midtrans\Notification();
         }
@@ -191,7 +191,10 @@ class Payment extends CI_Controller {
             $this->db->where('order_number', $order_id);
             $this->db->update('orders', $data);
         }
-        redirect("Customer/orders");
+        
+        var_dump($notif);
+        die("hooks received");
+        //redirect("Customer/orders");
     }
 
 

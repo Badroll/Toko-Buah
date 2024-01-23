@@ -38,7 +38,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div> -->
       </div>
       <div class="row block-9">
-        <div class="col-md-6 order-md-last d-flex">
+        <!-- <div class="col-md-6 order-md-last d-flex">
           <form action="<?php echo site_url('pages/send_message'); ?>" class="bg-white p-5 contact-form" method="POST">
           <?php if ($flash) : ?>
           <div class="text-success text-center" style="margin-bottom: 25px;"><?php echo $flash; ?></div>
@@ -65,9 +65,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
           </form>
         
-        </div>
+        </div> -->
 
-        <div class="col-md-6 d-flex">
+        <div class="col-md-12 d-flex">
             <div style="width: 100%">
                 <iframe width="100%" height="600" src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;coord=-3.7576348,102.2873882&amp;q=%20jl.%20Sukahaji%20Jl.%20Gagerkalong%20Hilir%20No.%20116%20Rt.%203%20Rw.%207%20Sukarasa%20Kec.%2C%20Sukasari%20Kota%2C%20Bandung+(Toko%20AFiveJCustomTshirt&KaosPolos)&amp;ie=UTF8&amp;t=&amp;z=15&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
                     <a href="https://www.maps.ie/coordinates.html">find my coordinates</a>

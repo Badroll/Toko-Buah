@@ -65,6 +65,26 @@ class Order_model extends CI_Model {
         return $orders->result();
     }
 
+    public function get_all_orders_bystatus($limit, $start, $status)
+    {
+        $id = $this->user_id;
+
+        $orders = $this->db->query("
+            SELECT o.id, o.order_number, o.order_date, o.order_status, o.payment_method, o.total_price, o.total_items, c.name AS coupon, cu.name AS customer
+            FROM orders o
+            LEFT JOIN coupons c
+                ON c.id = o.coupon_id
+            JOIN customers cu
+                ON cu.user_id = o.user_id
+            WHERE o.user_id = '$id'
+            AND o.order_status = '$status'
+            ORDER BY o.order_date DESC
+            LIMIT $start, $limit
+        ");
+
+        return $orders->result();
+    }
+
     public function order_with_bank_payments()
     {
         return $this->db->where(array('user_id' => $this->user_id, 'payment_method' => 1, 'order_status' => 1))->order_by('order_date', 'DESC')->get('orders')->result();

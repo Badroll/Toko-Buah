@@ -1,17 +1,27 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
+$title = "Order";
+if($status == "1"){
+    $title = "Belum Dibayar";
+}else if($status == "2"){
+    $title = "Dikemas";
+}else if($status == "3"){
+    $title = "Dikirim";
+}else if($status == "4"){
+    $title = "Selesai";
+}
 ?>
 <div class="content-wrapper">
     <section class="content-header">
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Order Saya</h1>
+                    <h1><?php echo $title; ?></h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><?php echo anchor(base_url(), 'Home'); ?></li>
-                        <li class="breadcrumb-item active">Order Saya</li>
+                        <li class="breadcrumb-item active"><?php echo $title; ?></li>
                     </ol>
                 </div>
             </div>
@@ -50,7 +60,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="row">
                     <div class="col-md-6">
                         <div class="alert alert-info">
-                            Belum ada data order.
+                            Tidak ada data order <b><?php echo $title; ?></b>
                         </div>
                     </div>
                 </div>

@@ -25,7 +25,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <div class="container-fluid">
         <div class="row">
 
-          <div class="col-lg-3 col-6">
+          <div class="col-lg-3 col-6" style="cursor: pointer;" onclick="javascrip:window.location='customer/orders?status=1'">
             <!-- small box -->
             <div class="small-box bg-warning">
               <div class="inner">
@@ -40,7 +40,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
           </div>
           
-          <div class="col-lg-3 col-6">
+          <div class="col-lg-3 col-6" style="cursor: pointer;" onclick="javascrip:window.location='customer/orders?status=2'">
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
@@ -55,7 +55,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
           </div>
           
-          <div class="col-lg-3 col-6">
+          <div class="col-lg-3 col-6" style="cursor: pointer;" onclick="javascrip:window.location='customer/orders?status=3'">
             <!-- small box -->
             <div class="small-box bg-primary">
               <div class="inner">
@@ -70,7 +70,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
           </div>
           
-          <div class="col-lg-3 col-6">
+          <div class="col-lg-3 col-6" style="cursor: pointer;" onclick="javascrip:window.location='customer/orders?status=4'">
               <!-- small box -->
               <div class="small-box bg-success">
                 <div class="inner">

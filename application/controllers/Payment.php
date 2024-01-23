@@ -15,18 +15,6 @@ class Payment extends CI_Controller {
         $this->apiKey = "1c0f510e542140c008e2b49d73e5f645";
     }
 
-    public function pay1(){
-        $data["data1"] = "1";
-
-        get_template_part('pages/pay-core-api', $data);
-    }
-
-    public function pay2(){
-        $data["data1"] = "1";
-
-        get_template_part('pages/pay-snap-redirect', $data);
-    }
-
     public function checkout(){
         // non-relevant function only used for demo/example purpose
         $this->printExampleWarningMessage();

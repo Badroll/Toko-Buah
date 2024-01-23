@@ -17,6 +17,11 @@ class Payment_model extends CI_Model {
         return $this->db->select('SUM(total_price) as total_payment')->where('order_status', 4)->or_where('order_status', 3)->get('orders')->row()->total_payment;
     }
 
+    public function success_payment()
+    {
+        return $this->db->select('total_price')->where('order_status', 4)->or_where('order_status', 3)->get('orders')->row()->total_payment;
+    }
+
     public function payment_overview()
     {
         $data = $this->db->query("

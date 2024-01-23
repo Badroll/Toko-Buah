@@ -12,10 +12,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <link href="<?php echo get_theme_uri('custom/auth/login/css/fontawesome-all.css'); ?>" rel="stylesheet" />
         <link href="//fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
     </head>
-    <body>
-        <h1><b>LOGIN</b></h1>
+    <body style="background: #f0f0f0 !important;">
+        <h1><b></b></h1>
         <div class=" w3l-login-form">
-            <h2>Login Akun</h2>
+            <h2><b>LOGIN AKUN</b></h2>
             <?php if ($flash_message) : ?>
             <div class="flash-message">
                 <?php echo $flash_message; ?>
@@ -47,7 +47,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <?php echo form_error('password'); ?>
             </div>
             <div class="forgot">
-                <?php echo anchor('auth/forget-password', 'Lupa password?'); ?>
+                <?php echo anchor('auth/register', 'Belum punya akun? Daftar di sini'); ?>
                 <p><input type="checkbox" name="remember_me" value="1">Ingat saya</p>
             </div>
             <button type="submit">Login</button>

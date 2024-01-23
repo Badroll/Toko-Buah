@@ -20,7 +20,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           </div>
           <!-- Card stats -->
           <div class="row">
-            <div class="col-xl-3 col-md-6">
+            <div class="col-xl-4 col-md-6">
               <div class="card card-stats">
                 <!-- Card body -->
                 <div class="card-body">
@@ -42,7 +42,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </div>
               </div>
             </div>
-            <div class="col-xl-3 col-md-6">
+            <div class="col-xl-4 col-md-6">
               <div class="card card-stats">
                 <!-- Card body -->
                 <div class="card-body">
@@ -64,7 +64,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </div>
               </div>
             </div>
-            <div class="col-xl-3 col-md-6">
+            <div class="col-xl-4 col-md-6">
               <div class="card card-stats">
                 <!-- Card body -->
                 <div class="card-body">
@@ -86,7 +86,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </div>
               </div>
             </div>
-            <div class="col-xl-3 col-md-6">
+            <div class="col-xl-4 col-md-6">
               <div class="card card-stats">
                 <!-- Card body -->
                 <div class="card-body">
@@ -108,6 +108,53 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </div>
               </div>
             </div>
+
+            <div class="col-xl-4 col-md-6">
+              <div class="card card-stats">
+                <!-- Card body -->
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">Pendapatan Bulan Ini</h5>
+                      <span class="h2 font-weight-bold mb-0">Rp <?php echo format_rupiah($total_income_month); ?></span>
+                    </div>
+                    <div class="col-auto">
+                      <div class="icon icon-shape bg-gradient-info text-white rounded-circle shadow">
+                        <i class="ni ni-money-coins"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="mt-3 mb-0 text-sm">
+                    <span class="text-success mr-2"><i class="fa fa-arrow-up"></i></span>
+                    <span class="text-nowrap">Total pendapatan bulan ini</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-4 col-md-6">
+              <div class="card card-stats">
+                <!-- Card body -->
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">Pendapatan Hari Ini</h5>
+                      <span class="h2 font-weight-bold mb-0">Rp <?php echo format_rupiah($total_income_today); ?></span>
+                    </div>
+                    <div class="col-auto">
+                      <div class="icon icon-shape bg-gradient-info text-white rounded-circle shadow">
+                        <i class="ni ni-money-coins"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="mt-3 mb-0 text-sm">
+                    <span class="text-success mr-2"><i class="fa fa-arrow-up"></i></span>
+                    <span class="text-nowrap">Total pendapatan hari ini</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
@@ -191,6 +238,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
           </div>
         </div>
+
         <div class="col-xl-4">
           <!-- Checklist -->
           <div class="card">
@@ -217,23 +265,40 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
           </div>
         </div>
-        <div class="col-xl-4">
-          <!-- Progress track -->
+
+        <!-- <div class="col-xl-4">
           <div class="card">
-            <!-- Card header -->
             <div class="card-header">
-              <!-- Title -->
+              <h5 class="h3 mb-0">Order baru</h5>
+            </div>
+            <div class="card-body p-0">
+              <ul class="list-group list-group-flush" data-toggle="checklist">
+                <?php foreach ($orders as $order) : ?>
+                <li class="checklist-entry list-group-item flex-column align-items-start py-4 px-4">
+                  <div class="checklist-item checklist-item-info">
+                    <div class="checklist-info">
+                      <h5 class="checklist-title mb-0"><?php echo anchor('admin/orders/view/'. $order->id, 'Order #'. $order->order_number); ?></h5>
+                      <small><?php echo $order->total_items; ?></small> | <small>Rp <?php echo format_rupiah($order->total_price); ?></small>
+                    </div>
+                  </div>
+                </li>
+                <?php endforeach; ?>
+              </ul>
+            </div>
+          </div>
+        </div> -->
+          
+        <!-- <div class="col-xl-4">
+          <div class="card">
+            <div class="card-header">
               <h5 class="h3 mb-0">Pembayaran menunggu konfirmasi</h5>
             </div>
-            <!-- Card body -->
             <div class="card-body">
-              <!-- List group -->
               <ul class="list-group list-group-flush list my--3">
               <?php foreach ($payments as $payment) : ?>
                 <li class="list-group-item px-0">
                   <div class="row align-items-center">
                     <div class="col-auto">
-                      <!-- Avatar -->
                       <a href="<?php echo site_url('admin/payments/users/'. $payment->user_id); ?>" class="avatar rounded-circle">
                         <img alt="Image placeholder" src="<?php echo base_url('assets/uploads/users/'. $payment->profile_picture); ?>">
                       </a>
@@ -250,7 +315,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               </ul>
             </div>
           </div>
-        </div>
+        </div> -->
+        
       </div>
       
       <div class="row">

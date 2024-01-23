@@ -82,10 +82,34 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </a>
           </li>
           <li class="nav-item">
-            <a href="<?php echo site_url('customer/orders'); ?>" class="nav-link">
+            <a href="<?php echo site_url('customer/orders?status=1'); ?>" class="nav-link">
               <i class="nav-icon fas fa-shopping-cart"></i>
               <p>
-                Order Saya
+                Belum Dibayar
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="<?php echo site_url('customer/orders?status=2'); ?>" class="nav-link">
+              <i class="nav-icon fas fa-shopping-cart"></i>
+              <p>
+                Dikemas
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="<?php echo site_url('customer/orders?status=3'); ?>" class="nav-link">
+              <i class="nav-icon fas fa-shopping-cart"></i>
+              <p>
+                Dikirim
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="<?php echo site_url('customer/orders?status=4'); ?>" class="nav-link">
+              <i class="nav-icon fas fa-shopping-cart"></i>
+              <p>
+                Selesai
               </p>
             </a>
           </li>
@@ -97,14 +121,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               </p>
             </a>
           </li> -->
-          <!-- <li class="nav-item">
+          <li class="nav-item">
             <a href="<?php echo site_url('customer/reviews'); ?>" class="nav-link">
               <i class="nav-icon fa fa-edit"></i>
               <p>
                 Review
               </p>
             </a>
-          </li> -->
+          </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->

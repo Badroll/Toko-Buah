@@ -37,10 +37,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </head>
 
 <body>
-    <div class="page-wrapper bg-red p-t-180 p-b-100 font-robo">
+    <div class="page-wrapper bg-gray p-t-180 p-b-100 font-robo">
         <div class="wrapper wrapper--w960">
             <div class="card card-2">
-                <div class="card-heading"></div>
+
+                <div>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                <div class="card-heading" style="
+                    background: url('<?php echo base_url('assets/uploads/sites/Logo2.jpg'); ?>');
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    transform: scale(1.0);
+                    ">
+                </div>
+
+                <!-- <div class="card-heading" style="
+                background: red;
+                "></div> -->
+
                 <div class="card-body">
                     <h2 class="title">Buat Akun <?php echo get_store_name(); ?></h2>
                     <?php echo form_open('auth/register/verify'); ?>
